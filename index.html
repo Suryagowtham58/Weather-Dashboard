@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple weather dashboard built with HTML, CSS and JavaScript.">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="weather-app">
+    <header class="topbar">
+      <a class="brand" href="#">weather<span>.</span></a>
+      <span class="tag">A MINI WEB PROJECT</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR DAILY FORECAST</p>
+      <h1>Check the weather<span>.</span></h1>
+      <p>Find weather information for a city around the world.</p>
+    </section>
+
+    <form id="weatherForm" class="search-form">
+      <label class="visually-hidden" for="cityInput">City name</label>
+      <input id="cityInput" type="text" placeholder="Enter a city name"
+        autocomplete="off" required>
+      <button type="submit">Search ↗</button>
+    </form>
+
+    <p id="status" class="status" aria-live="polite">
+      Enter a city to get its current weather.
+    </p>
+
+    <section id="weatherResult" class="weather-card" hidden>
+      <div class="weather-heading">
+        <div>
+          <p class="eyebrow">CURRENT WEATHER</p>
+          <h2 id="cityName">--</h2>
+          <p id="weatherDescription" class="muted">--</p>
+        </div>
+        <span id="weatherIcon" class="weather-icon" aria-hidden="true">☁</span>
+      </div>
+
+      <div class="temperature">
+        <span id="temperature">--</span><span class="degree">°C</span>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail">
+          <span>HUMIDITY</span>
+          <strong id="humidity">--%</strong>
+        </div>
+        <div class="detail">
+          <span>WIND SPEED</span>
+          <strong id="windSpeed">-- km/h</strong>
+        </div>
+        <div class="detail">
+          <span>FEELS LIKE</span>
+          <strong id="feelsLike">--°C</strong>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built with HTML, CSS & JavaScript.</p>
+      <p>Weather data powered by Open-Meteo.</p>
+    </footer>
+  </main>
+</body>
+</html>
